@@ -5,4 +5,6 @@ class User < ApplicationRecord
     validates :email, presence: true, 
                 uniqueness: {case_sensitive: false}, 
                 length: { minimum: 3, maxmimum: 105 }
+
+    has_many :articles                
 end
