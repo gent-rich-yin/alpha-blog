@@ -8,5 +8,7 @@ class User < ApplicationRecord
                 uniqueness: {case_sensitive: false}, 
                 length: { minimum: 3, maxmimum: 105 }
 
-    has_many :articles                
+    has_many :articles
+    
+    has_secure_password
 end
